@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TDServer", "TDServer\TDServer.csproj", "{E060DC29-3AFA-4A93-9205-128B5E18DC08}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TDApi", "TDApi\TDApi.csproj", "{BBAEB657-E8D2-4F85-BACB-A84CCB7721DE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E060DC29-3AFA-4A93-9205-128B5E18DC08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E060DC29-3AFA-4A93-9205-128B5E18DC08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E060DC29-3AFA-4A93-9205-128B5E18DC08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E060DC29-3AFA-4A93-9205-128B5E18DC08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBAEB657-E8D2-4F85-BACB-A84CCB7721DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBAEB657-E8D2-4F85-BACB-A84CCB7721DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBAEB657-E8D2-4F85-BACB-A84CCB7721DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBAEB657-E8D2-4F85-BACB-A84CCB7721DE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
