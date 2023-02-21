@@ -30,8 +30,17 @@ Hello
 
         if (response.IsSuccessStatusCode)
         {
-            using var responseStream = await response.Content.ReadAsStreamAsync();
-            ToDos = await JsonSerializer.DeserializeAsync<IEnumerable<ToDo>>(responseStream);
+            await using var responseStream = await response.Content.ReadAsStreamAsync();
+            
+            ToDos = await response.Content.ReadFromJsonAsync<IEnumerable<ToDo>>();
+            
+            /* also works
+             ToDos = await JsonSerializer.DeserializeAsync<IEnumerable<ToDo>>(
+                responseStream,
+                new JsonSerializerOptions
+                {
+                    PropertyNamingPolicy = JsonNamingPolicy.CamelCase
+                });*/
         }
         else
         {
