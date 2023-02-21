@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TDServer", "TDServer\TDServ
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TDApi", "TDApi\TDApi.csproj", "{BBAEB657-E8D2-4F85-BACB-A84CCB7721DE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TDWasm", "TDWasm\TDWasm.csproj", "{23CDFE4D-74CA-4848-A243-AA5705DFBF5D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{BBAEB657-E8D2-4F85-BACB-A84CCB7721DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BBAEB657-E8D2-4F85-BACB-A84CCB7721DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BBAEB657-E8D2-4F85-BACB-A84CCB7721DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23CDFE4D-74CA-4848-A243-AA5705DFBF5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23CDFE4D-74CA-4848-A243-AA5705DFBF5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23CDFE4D-74CA-4848-A243-AA5705DFBF5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23CDFE4D-74CA-4848-A243-AA5705DFBF5D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

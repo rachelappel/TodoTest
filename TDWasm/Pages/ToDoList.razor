@@ -1,9 +1,9 @@
 ﻿@page "/ToDoList"
-
 @using System.Text.Json
+@using TDWasm.Services
 @inject IHttpClientFactory ClientFactory
 <h3>ToDoList</h3>
-Hello
+
 
 @{
     <ul>
@@ -16,6 +16,8 @@ Hello
 
 
 @code {
+   // private List<ToDo> ToDos;
+   
     private IEnumerable<ToDo> ToDos = Array.Empty<ToDo>();
     private bool toDoErr;
     private bool shouldRender;
@@ -23,9 +25,8 @@ Hello
     
     protected override async Task OnInitializedAsync()
     {
+        //allList = await WebRequestMethods.Http.GetStringAsync("https://localhost:7196/api/ToDos");
         var request = new HttpRequestMessage(HttpMethod.Get, "https://localhost:7196/api/ToDos");
-        
-        
         request.Headers.Add("Accept", "application/json");
         request.Headers.Add("User-Agent", "ToDoList");
         
@@ -42,16 +43,11 @@ Hello
         {
             toDoErr = true;
         }
+
         shouldRender = true;
+    
+        
     }
-
-
-    public class ToDo
-    {
-        public int Id { get; set; }
-        public string? Title { get; set; }
-        public bool Complete { get; set; }
-        public string? Due { get; set; }
-    }
+    
 
 }
