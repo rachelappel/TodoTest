@@ -1,5 +1,4 @@
 ﻿@page "/ToDoList"
-
 @using System.Text.Json
 @inject IHttpClientFactory ClientFactory
 <h3>ToDoList</h3>
@@ -14,23 +13,19 @@ Hello
     </ul>
 }
 
-
 @code {
     private IEnumerable<ToDo> ToDos = Array.Empty<ToDo>();
     private bool toDoErr;
     private bool shouldRender;
-    
+    private HttpClient Http;
     
     protected override async Task OnInitializedAsync()
     {
         var request = new HttpRequestMessage(HttpMethod.Get, "https://localhost:7196/api/ToDos");
-        
-        
         request.Headers.Add("Accept", "application/json");
         request.Headers.Add("User-Agent", "ToDoList");
         
         var client = ClientFactory.CreateClient();
-
         var response = await client.SendAsync(request);
 
         if (response.IsSuccessStatusCode)
@@ -44,6 +39,8 @@ Hello
         }
         shouldRender = true;
     }
+
+    public string? HttpClient { get; set; }
 
 
     public class ToDo
